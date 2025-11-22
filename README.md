@@ -30,7 +30,7 @@ A full-stack CRUD web application for tracking household item storage with compr
 
 1. **Clone or download the repository:**
 ```bash
-git clone <repository-url>
+git clone https://github.com/MohammadAlsheroa/Household-Tracking-Website.git
 cd Household-Tracking-Website
 ```
 
