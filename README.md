@@ -26,40 +26,44 @@ A full-stack CRUD web application for tracking household item storage with compr
 - Node.js 18+ and npm installed
 - Basic knowledge of terminal/command line
 
-### Installation Steps
+### Installation & Initialization
 
-1. **Install dependencies:**
+1. **Clone or download the repository:**
+```bash
+git clone <repository-url>
+cd Household-Tracking-Website
+```
+
+2. **Install dependencies:**
 ```bash
 npm install
 ```
 
-2. **Set up the database:**
+3. **Initialize the database:**
 ```bash
 # Generate Prisma client
-npm run db:generate
+npx prisma generate
 
-# Create database and tables
-npm run db:push
+# Create database schema and tables
+npx prisma db push
 
-# Seed the database with sample data (optional)
-npm run db:seed
+# (Optional) Seed the database with sample data
+npx prisma db seed
 ```
 
-3. **Run the development server:**
+4. **Start the development server:**
 ```bash
 npm run dev
 ```
 
-4. **Open your browser:**
-Navigate to [http://localhost:3000](http://localhost:3000)
+5. **Open your browser:**
+Navigate to [http://localhost:3000](http://localhost:3000) to access the application.
 
-### Database Location
+### Important Notes
 
-The SQLite database file will be created at `prisma/dev.db` after running `npm run db:push`.
-
-### Upload Directory
-
-Image uploads are stored in `public/uploads/`. This directory will be created automatically when you upload your first image.
+- **Database Location**: The SQLite database file will be created at `prisma/dev.db` after initialization
+- **Upload Directory**: Image uploads are stored in `public/uploads/` (created automatically on first upload)
+- **Environment**: Make sure you're running Node.js 18 or higher for optimal compatibility
 
 ## Project Structure
 
