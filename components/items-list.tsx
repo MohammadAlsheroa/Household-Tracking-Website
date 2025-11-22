@@ -73,7 +73,7 @@ export default function ItemsList() {
   const [formData, setFormData] = useState({
     name: '',
     category: '',
-    quantity: 1,
+    quantity: '' as number | '',
     storageLocationId: '',
     purchaseDate: '',
     expirationDate: '',
@@ -246,7 +246,7 @@ export default function ItemsList() {
     setFormData({
       name: '',
       category: '',
-      quantity: 1,
+      quantity: '' as number | '',
       storageLocationId: '',
       purchaseDate: '',
       expirationDate: '',
@@ -444,7 +444,7 @@ export default function ItemsList() {
                     type="number"
                     min="1"
                     value={formData.quantity}
-                    onChange={(e) => setFormData({ ...formData, quantity: parseInt(e.target.value) || 1 })}
+                    onChange={(e) => setFormData({ ...formData, quantity: e.target.value === '' ? '' : parseInt(e.target.value) })}
                     className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                     required
                   />
